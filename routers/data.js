@@ -40,8 +40,8 @@ app.get('/:categoriaid', filtrar, (req, res) => {
 	res.status(200).send(req.params);
 });
 
-//localhost:3002/api/data/2
-app.get('/:txt',procesar, (req, res) => {
+//localhost:3002/api/data/txt
+app.get('/txt/:txt',procesar, (req, res) => {
     console.log('procesando');
 	res.status(200).send(req.params);
 });
