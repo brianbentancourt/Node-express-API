@@ -1,1 +1,1 @@
-Ejecutar npm start
+Ejecutar npm start para levantar servidor
