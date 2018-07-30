@@ -30,20 +30,29 @@ app.get('/', (req, res) => {
 
 // http://localhost:3002/api/data/all
 app.get('/all', (req, res) => {
+    console.log('procesando');
 	res.status(200).send(datos);
 });
 
 // http://localhost:3002/api/data/:categoriaid
 app.get('/:categoriaid', filtrar, (req, res) => {
+    console.log('procesando');
 	res.status(200).send(req.params);
 });
 
 //localhost:3002/api/data/2
 app.get('/:txt',procesar, (req, res) => {
+    console.log('procesando');
 	res.status(200).send(req.params);
 });
 
-app.post('/text/:txt', (req,res) =>{
-})
+
+
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 module.exports = app;
