@@ -19,6 +19,10 @@ app.use(bodyparser.urlencoded({extended: false}));
 app.use('/products', productsRoutes);
 //app.use('/calc', calcRouters());
 
+app.get('/', (eq, res)=>{
+    res.send('Ver codigo fuente en ===> https://github.com/brianbentancourt/Node-express-API')
+})
+
 // start server
 app.listen(port, () => {
     console.log('Corriendo servidor en puerto', port);
