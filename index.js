@@ -7,6 +7,7 @@ const productsRoutes = require('./routes/products');
 //const calcRouters = require('./routes/calc');
 
 // settings
+var port = process.env.PORT || 3000
 app.set('json spaces', 4);
 
 // middlewares
@@ -19,6 +20,6 @@ app.use('/products', productsRoutes);
 //app.use('/calc', calcRouters());
 
 // start server
-app.listen(3000, () => {
-    console.log('Corriendo servidor en puerto', 3000);
+app.listen(port, () => {
+    console.log('Corriendo servidor en puerto', port);
 });
