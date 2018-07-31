@@ -1,22 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const {products} = require('../data.json');
+const {
+        getProducts,
+        addProduct,
+        updateProduct, 
+        deleteProduct
+    } = require('../controllers/products');
 
 router.route('/')
-.get((req, res) =>{
-    res.json({products})
-})
-.post((req, res) =>{
-    // const prod = req.body.name;
-    const {name} = req.body;
-    
-    products.push({
-        name,
-        id:products.length
-    });
-    
-    res.json(products);
-})
+.get(getProducts)
+.post(addProduct)
+
+router.route('/:id')
+.put(updateProduct)
+.delete(deleteProduct)
 
 module.exports = router;
