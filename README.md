@@ -16,7 +16,7 @@ PUT
   https://node-express-api-2018.herokuapp.com/products/0
   
   {
-    "name": "Teclado"
+    "name": "TV"
   }
   
 DELETE
