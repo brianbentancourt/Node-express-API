@@ -7,7 +7,7 @@ const productsRoutes = require('./routes/products');
 //const calcRouters = require('./routes/calc');
 
 // settings
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 3000 
 app.set('json spaces', 4);
 
 // middlewares
